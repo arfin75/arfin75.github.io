@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<link href="styleSheet.css" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+	<style>
+
+	.text-color-white{
+		color:white;
+	}
+
+	a:link {
+		padding-left: 10px;
+	}
+
+	.form{text-align: center;
+		margin:auto;
+	}
+
+#formBold{
+	font-weight: bold;
+}
+
+	</style>
+</head>
+<body>
+	<div style="text-align: center;">
+		<h1>Woodside Seafood</h1>
+		<div id="links">
+			<h2 class="text-color-white">Contact Us</h2>
+			<p ><a href="home.html" class="text-color-white">Home Page</a>
+				<a href="menu.html" class="text-color-white">Menu</a>
+				<a href="contact.html" class="text-color-white">Contact Us</a></p>
+			</div>
+		</div>
+
+
+<div id="formBold">
+		<form action="submit.html"method="POST">
+			<label for="name">Name:</label><br/>
+			<input type="text" id="name"name="name"><br/>
+			<label for="Email">Email:</label><br/>
+			<input type="text" id="email"name="email"><br/>
+			<label for="phone">Phone:</label><br/>
+			<input type="text" id="phone"name="phone"><br/>
+			<label for="contact">Reason for Inquiry:</label>
+			<select id="contact" name="contact">
+				<option value="default" selected></option>
+				<option value="catering">Catering</option>
+				<option value="private party">Private Party</option>
+				<option value="feedback">Feedback</option>
+				<option value="other">Other</option>
+			</select>
+			<br/>
+			<label for="info">Additional Information</label>
+			<textarea id="info"></textarea>
+			<br/>
+			<legend>Have you been to the restaurant?</legend>
+			<input type="radio" name="answer" value="No"/>No
+			<input type="radio" name="answer" value="Yes"/>Yes
+			<br/>
+			<legend>Best days to contact you (check all that apply):</legend>
+			<input type="checkbox" id="monday" name="days" value="monday">
+			<label for="monday">Monday</label>
+			<input type="checkbox" id="tuesday" name="days" value="tuesday">
+			<label for="tuesday">Tuesday</label>
+			<input type="checkbox" id="wednesday" name="days" value="wednesday">
+			<label for="wednesday">Wednesday</label>
+			<input type="checkbox" id="thursday" name="days" value="thursday">
+			<label for="thursday">Thursday</label>
+			<input type="checkbox" id="friday" name="days" value="friday">
+			<label for="friday">Friday</label>
+			<br/>
+			<input type="submit" name="submit" value="Submit">
+		</form>
+	</div>
+
+		<div id="footer">
+
+			<footer>
+				<p>61st Woodside, Roosevelt Ave, NY 11377</p>
+				<p>Telephone: 5183646672</p>
+			</footer>
+		</div>
+	</div>
+
+</body>
+</html>

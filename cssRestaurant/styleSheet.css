@@ -1,0 +1,36 @@
+/* common elements across all pages */
+body {
+	background-image: "images/menu.jpeg";
+	background-color: #eaffd0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: scroll;
+	font-family: 'Courgette', cursive;
+	font-family: 'Courgette', cursive;
+	text-align: center;
+	width: 70%;
+	margin:auto;
+
+}
+
+a:hover {
+		color: blue;
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+a:link {
+	padding-left: 10px;
+}
+
+/*Header*/
+  h1 {
+    font-size: 40px;
+    color: maroon;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #999;
+    background-color: #d7fffd;
+  }
+footer{
+	background-color: #d7fffd;
+}
