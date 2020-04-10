@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Menu</title>
+  <link href="CSS/styleSheet.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+
+    body {
+      font-family: 'Courgette', cursive;
+      width: 60%;
+      margin: auto;
+      background-color: #fffdfc;
+      font-family: 'Merriweather', serif;
+      padding: 50px audio 50px auto;
+
+    }
+
+    a:hover {
+      color: #511845;
+    }
+
+    #navigation{
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: maroon;
+      margin-top: 100px;
+      font-family: 'Courgette', cursive;
+    }
+
+  caption {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+  }
+
+  table {
+   margin: auto;
+   margin-bottom: 20px;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    vertical-align: middle;
+
+  }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+
+    position: relative;
+
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+
+   display: none;
+
+  }
+
+  .numbertext {
+    float: left;
+    display: block;
+    margin: 0 20px 0 20px;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images
+  .cursor {
+    cursor: pointer;
+  }
+  */
+
+  /* Next & previous buttons
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+*/
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    padding-left: -20px;
+    width: 18%;
+  }
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  </style>
+
+</head>
+<body>
+  <h1>Woodside Seafood</h1>
+  <div id="navigation">
+   <p><a href="home.html" class="text-color-white">Home Page</a>
+    <a href="menu.html" class="text-color-white">Menu</a>
+    <a href="contact.html" class="text-color-white">Contact Us</a></p>
+  </div>
+  <h2 style="text-align: center"></h2>
+
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="images/menu-1.jpg" style="width: 60%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img id="img2" src="images/menu-2.jpg" style="width: 60%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="images/menu-4.jpg" style="width: 60%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext"></div>
+      <img src="images/menu-6.jpg" style="width: 60%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <!-- <div class="caption-container">
+   <p id="caption"></p>
+    </div>
+    -->
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="images/menu-1.jpg" style="width: 100%" onclick="currentSlide(1)" alt="The Woods">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/menu-2.jpg" style="width: 100%" onclick="currentSlide(2)" alt="Cinque Terre">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/menu-4.jpg" style="width: 100%" onclick="currentSlide(4)" alt="Northern Lights">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/menu-6.jpg" style="width: 90%" onclick="currentSlide(6)" alt="Snowy Mountains">
+      </div>
+    </div>
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+
+  </script>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        <h4>Grilled Calamari</h4>
+        <h5> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,.</h5>
+        <p> $6.00 </p>
+        <h4>Fried Calamari</h4>
+        <h5>making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</h5>
+        <p>$8.00</p>
+        <h4>Shrimp Cocktail</h4>
+        <h5>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</h5>
+        <p>$8.00</p>
+      </div>
+      <div class="col-sm-4">
+        <h4>Chicken Wings</h4>
+        <h5>Filling made with pulled chicken sauted with a blend of shitake, oyster, and button mushrooms. Served with a side of spicy creamy peanut sauce.</h5>
+        <p>$6.00</p>
+        <h4>Shrimp Momo</h4>
+        <h5>Shrimp, chives, and tender snow pea leaves mixed together to make a delicious momo filling.  Served with a side of ginger sesame sauce.</h5>
+        <p>$8.00</p>
+        <h4>Scallops Tajine</h4>
+        <h5>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</h5>
+        <p>$6.00</p>
+      </div>
+      <div class="col-sm-4">
+        <h4>Greek Salad</h4>
+        <h5>Tiger prawn and ground chicken sauted with napa cabbage to create a delicious blend of momo filling. Served with a side of creamy coconut sauce.</h5>
+        <p>$8.00</p>
+        <h4>Red Snapper</h4>
+        <h5>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</h5>
+        <p>$6.00</p>
+        <h4>Grilled Salmon</h4>
+        <h5>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable..</h5>
+        <p>$8.00</p>
+      </div>
+    </div>
+
+
+<div id="beverageTable">
+<table border="1" width="50%">
+<caption>Beverages</caption>
+<tr bgcolor = "#fcfdff">
+        <th>Green Tea</th>
+        <td>$1.00</td>
+</tr>
+<tr bgcolor = "#c5d6f7">
+        <th>Lemon Lime Soda</th>
+        <td>$2.00</td>
+</tr>
+<tr bgcolor = "#fcfdff">
+        <th>Coconut Water</th>
+        <td>$2.00</td>
+</tr>
+<tr bgcolor = "#c5d6f7">
+        <th>Sparkling Water</th>
+        <td>$1.50</td>
+</tr>
+</table>
+</div>
+
+
+    <div id="footer">
+      <footer>
+        <p>61st Woodside, Roosevelt Ave, NY 11377</p>
+        <p>Telephone: 518-364-6672</p>
+      </footer>
+    </div>
+  </div>
+  <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>

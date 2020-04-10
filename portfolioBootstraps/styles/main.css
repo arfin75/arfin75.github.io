@@ -1,0 +1,135 @@
+/*
+	Creator: Shah Arfin
+	Date Created: 04/09/2020
+*/
+
+body{
+	background-color:#fffdf9;
+	font-family: Sans-serif;
+	color: #606060;
+	max-width:900px;
+	margin: 0 auto;
+}
+
+/*header {
+	background-color: #beebe9;
+	color: #606060;
+	height:100px;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	border-radius: 0;
+}*/
+
+/*footer{
+	background-color: #8ac6d1;
+	color: #606060;
+	height:100px;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	border-radius: 0;
+	*/
+footer{
+	text-align: center;
+	padding: 10px, 10px, 10px, 10px;
+	border-radius: 0;
+	height: 100px;
+}
+
+h1{
+	font-size: 2 em;
+}
+nav{
+	border-top: 3px dashed #546a7b;
+	border-bottom: 3px dashed #546a7b;
+	margin-top: 2px;
+}
+
+label, fieldset{
+	font-size: 1.1em;
+}
+
+input[type=text]{
+	border: 2px solid #0d1f2d;
+	width: 50%;
+	padding: 8px 8px;
+	margin: 12px 0;
+	box-sizing: border-box;
+	font-size: 1 em;
+}
+
+fieldset {
+	background-color: #fef9ff;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 12px 0;
+	box-sizing: border-box;
+}
+select, textarea{
+	margin: 12px 0;
+	font-size: 1em;
+}
+input[type=submit]{
+	font-size: 1.2em;
+	color: #fef9ff;
+	padding: 4px 8px
+	background-color: inherit;
+}
+
+/*input[type=submit]:hover{
+	background-image: #005082;
+	color: #084177;
+}*/
+
+/*textarea{
+	width:100%;
+	height: 200px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid #0d1f2d;
+	border-radius: 3px;
+	background-color: #fff;
+	resize: none;
+}*/
+
+.clear-float{
+	clear:both;
+}
+
+article img {
+	float:left;
+	border-radius: 30px;
+}
+.right-content{
+	float:left;
+	margin-left: 15%;
+}
+/*article {
+    margin-bottom: 16px;
+}
+/*8nav a {
+	background-color: #B7E4F4;
+	color: #606060;
+	padding: 8px;
+	border: thin solid #0d1f2d;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	margin: 20px 20px;
+	width: 100px;
+	float: left;
+}*/
+/*nav a:visited {
+	background-color: #B7E4F4;
+	color: #5b7d87;
+}*/
+nac a:hover {
+	background-color: #B5BDAF;
+	color: #5b7d87;
+}
+
+nav a:active {
+	font-weight: bold;
+	text-align: center;
+}
