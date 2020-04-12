@@ -8,9 +8,12 @@ body {
 }
 
 .intro {
-  width: 30%;
+  width: 40%;
   margin: auto;
+  padding-top: 10px;
+
 }
+
 h1 {
   color: #66BFBF;
   margin-top: 0;
@@ -18,7 +21,7 @@ h1 {
   margin: 0 auto 0 auto;
   font-family: 'Sacramento', cursive;
   font-size: 5.625rem;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
   margin: 50px auto 0 auto;
 }
 
@@ -27,7 +30,8 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-size: 2.5rem;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  font-weight: bold;
 
 }
 
@@ -56,6 +60,7 @@ h3 {
 
 p {
   line-height: 2;
+  padding: 10px 0 10px 0;
 }
 
 hr {
@@ -68,28 +73,65 @@ hr {
 img {
   position:  relative;
   left: -1px;
-  padding-top:10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.skill-row {
+img-2 {
+  position:  relative;
+  left: -1px;
+  padding-top: ;
+  padding-bottom: 100px;
+}
+
+/*.skill-row {
   width: 50%;
-  margin: 100px auto 100px auto;
+  margin: 100px auto 100px;
   text-align:left;
   line-height: 1;
 
+}*/
+
+/*.skill-row-2 {
+  width: 50%;
+  margin: 100px  100px;
+  text-align:left;
+  line-height: 1;
+  float: left;
+}*/
+
+/*.skill-row-3 {
+  width: 50%;
+  margin: 100px  100px ;
+  text-align:left;
+  line-height: 1;
+  float: left;
+
+}*/
+
+li {
+  margin: 15px 0;
+  font-weight: bold;
 }
 
-.img-3 {
+.contact-me-4 {
+ text-align: center;
+ margin-top: 4em;
+}
+
+
+/*.img-3 {
   width: 20%;
   float: left;
   margin-left: 25px;
 }
-
-.img-4 {
+*/
+/*.img-4 {
   width: 43%;
   float: right;
   margin-right: 20px:
 }
+*/
 
 .footer-intro {
   width: 40%;
@@ -113,6 +155,7 @@ img {
   background: -webkit-gradient(linear, left top, left bottom, from(#47EE79), to(#468CCF));
   background: -moz-linear-gradient(top,  #47EE79,  #468CCF);
 }
+
 .btn :hover {
   color: #14396A !important;
   background: #468CCF;
@@ -124,13 +167,43 @@ img {
 
 .botton-container {
   background-color: #66BFBF;
-  margin-top: 1em;
+  margin-top: 2em;
   padding-bottom: 30px;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 a {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
 
+}
+
+
+
+.container .box {
+             width:200px;
+             margin:auto;
+             display:table;
+             width: 75%;
+}
+.container .box .box-row {
+             display:table-row;
+}
+.container .box .box-cell {
+             display: table-cell;
+             padding:10px;
+              width: 33%;
+}
+.container .box .box-cell.box1 {
+             background: #84a9ac;
+             color:white;
+             text-align: justify;
+}
+.container .box .box-cell.box2 {
+             background: #f3ecb8;
+             text-align: justify;
+}
+.container .box .box-cell.box3 {
+             background:#84a9ac;
+             text-align: justify;
 }
