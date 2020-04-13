@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lucky 7's</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    body {
+      font-family: 'El Messiri', sans-serif;
+      background-color: #442727;
+      color: gray;
+      text-align: center;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+Button {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:16px;
+	border:1px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+table {
+  margin: auto;
+  padding-bottom:20px;
+  margin-top: 2em;
+}
+
+</style>
+
+</head>
+<body>
+  <h1>Lucky 7's</h1>
+  <img src= "img/giphy.webp" width="250px" height="250px">
+  <br>
+  Starting bet: <input id="firstNumber" type="number"><br><br>
+
+  <button id="calculate" onClick="hatsOff()">Play Game</button>
+
+  <table style="width:50%">
+    <tr>
+      <td>Your Starting Bet</td>
+      <td><p id="startingBet"></p></td>
+    </tr>
+    <tr>
+      <td>Total Number of Rolls</td>
+      <td><p id="totalRoll"></p></td>
+    </tr>
+    <tr>
+      <td><font color= red>Highest Amount Won</font></td>
+      <td><font color= green><p id="highestWon"></p></font></td>
+    </tr>
+    <tr>
+      <td>Roll Count before Highest Amount</td>
+      <td><p id="rollCountHighestWon"></p></td>
+    </tr>
+</table>
+</body>
+</html>
+<script type="text/javascript">
+  function hatsOff(){
+    let firstNum = parseInt(document.getElementById("firstNumber").value);
+
+document.getElementById("startingBet").innerHTML = firstNum;
+  if(firstNum < 0 ){
+    alert("You're betting less than a dollar?? Please try again.");
+    return;
+  }
+let money = firstNum;
+let totalRoll = 0;
+let highestWon = 0;
+let rollCountHighestWon = 0;
+while(money >0) {
+  let dice1 = rollDice();
+  let dice2 = rollDice();
+  if ((dice1+dice2) ===7){
+    money = money+4;
+  }else {
+    money = money-1;
+  }
+if (highestWon < money ){
+  highestWon = money;
+  rollCountHighestWon = totalRoll +1;
+}
+  totalRoll++;
+}
+document.getElementById("totalRoll").innerHTML = totalRoll;
+document.getElementById("highestWon").innerHTML = "$"+highestWon;
+document.getElementById("rollCountHighestWon").innerHTML = rollCountHighestWon;
+ }
+ function rollDice(){
+   return Math.floor(Math.random() * Math.floor(6))+1;
+ }
+</script>
